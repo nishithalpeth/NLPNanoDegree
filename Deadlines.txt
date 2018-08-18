@@ -1,7 +1,7 @@
 August Class
 Project	Suggested Deadline
-Term Begins	Aug 14
-Part of Speech Tagging	Sep 4
-Machine Translation	Oct 6
-DNN Speech Recognizer	Oct 27
-Term End Deadline	Nov 10
+Term Begins	              Aug 14
+Part of Speech Tagging	  Sep 4
+Machine Translation	      Oct 6
+DNN Speech Recognizer	    Oct 27
+Term End Deadline	        Nov 10
