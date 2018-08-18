@@ -1,0 +1,11 @@
+NLP is one of the most exciting and fastest growing applications in Machine Learning
+
+Three Parts
+Part 1 : Basics of language processing and very interesting probablistic algorithms
+		 Project : Build a Model for POS Tagging using hidden Markov models
+
+Part 2 : Deep Learning based Language Models
+		 Projet : Machine Translation Models using Deep Neural Networks
+
+Part 3 : Speech Recognition and Voice User interface
+		 Project : End to End Speech Recognition Model using Deep Neural Networks
