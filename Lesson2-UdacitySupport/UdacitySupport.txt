@@ -1,0 +1,8 @@
+Important URLs
+--------------
+
+
+1) https://knowledge.udacity.com/
+
+2) https://waffle.io/udacity/nlpnd-waffle-issues
+

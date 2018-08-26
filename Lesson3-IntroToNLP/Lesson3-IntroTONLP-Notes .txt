@@ -1,0 +1,46 @@
+Everything in NLP starts with Raw Text typically...
+
+Text is transformed using simple transformation such as 
+- splitting it into individual words
+- Reducing verbs to their root form
+
+Do this before any Analysis, Training complex models
+
+Aim of this module 
+1) Design an intelligent application that uses NLP techniques
+2) Deploy it on a scalable platform
+
+
+What can computers do to make sense of unstructured Text?
+1) Process words and phrases - Parts of Speech, named entities, dates, quantities etc
+2) Parse Sentences - Ones that are relatively more structured - Helps extract relevant parts of statements, questions and instructions
+3) Analyze Documents - Find frequent and Rare words, Analyse Tone and Sentiment, cluster or group similar documents together
+
+
+NLP pipeline
+-------------
+Start with Raw text (whatever form) -- Process it -- Extract relevant features -- Build models to accomplish various NLP tasks
+
+Step 1: Text Processing - 
+		- Take raw input text, clean it, normalize it, convert it into form suitable for feature extraction
+		- For NLP, you will get rid of all HTML tags, if any and retain plain text 
+		- Remove URLS not relevant to your task 
+		- You may need to consume PDF, word doc or other file formats
+		- Raw data may even come from speech recognition or book scan using OCR
+		- Goal is to extract plain text 
+		- Further processing may be necessary ex: Removing Capitalization, removing punctuation marks, stop words like a, an, the can be removed
+		
+Step 2 - Feature Extraction - 
+		- Extract and produce feature representation, appropriate for type of model you are planning to use
+		- We cannot directly feed raw text into models, we need to encode text data
+		- If you want to use graph based algo - we need to use words as symbolic nodes ex: wordnet
+		- For Statistical model, you need some numerical representation
+		- If its a document level task - ex: Spam detection, Sentiment Analysis - use per document representation such as bag of words, doc2vec
+		- Text generation, Machine Translation - word level representation - word2vec or Glove
+
+Step 3 - Modeling - 
+		- Designing a model - statistical or Machine Learning model
+		- Fit parameters to training data using an optimization procedure
+		- Use it to make predictions about unseen data
+		If you have numeric model, you can use any ML model - Support vector machines, decision Trees, Neural Networks or any custom models
+

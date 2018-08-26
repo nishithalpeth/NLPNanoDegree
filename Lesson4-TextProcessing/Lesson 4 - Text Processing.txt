@@ -1,0 +1,96 @@
+Aim of this lesson
+-------------------
+- How to make design decisions
+- Choose existing libraries/tools to perform each step
+- Read Text data from different sources
+- Prepare it for feature extraction
+
+1) Remove HTML tags
+2) Normalise text by converting it to lower case
+3) Remove Punctuation and extra spaces
+4) Split into words or tokens
+5) Remove Stop words
+6) Identify different part of speech, named entities, convert words to cannonical form using stemming and lemmatization
+
+Tip 1: 
+How to install a library using Condat Navigator
+	URL : https://stackoverflow.com/questions/39299726/cant-find-package-on-anaconda-navigator-what-to-do-next
+	step 1 : Click Open terminal from environment 
+	step 2: Execute conda install keras in terminal mode
+
+Tip 2 : 
+If you get PackagesNotFoundError: The following packages are not available from current channels:
+	URL : https://stackoverflow.com/questions/48493505/packagesnotfounderror-the-following-packages-are-not-available-from-current-cha
+	Step : conda install -c conda-forge <package>
+
+Processing Stage
+----------------
+	1) starts with reading text data 
+	   ------------------------------
+		Type of sources 
+			- Plain Text File (Use Python's built in File Input mechanism)
+			- CSV file (Read this using Pandas)
+			- Web Service/API (requests library in Python)
+	
+	2) Cleansing
+	   ---------
+			- Regex is not an intuitive way of cleansing the HTML tags from a web sources
+			- Use BeautifulSoup -> removes HTML tags, grab HTML object, grab sung the CSS selector
+	
+	3) Case Normalization
+	   ------------------
+			- Every letter converted to common lowercase - use text.lower() 
+			- punctuation removal
+			
+	4) Tokenization
+	   ------------
+			- breaking text into individual words
+			- splitting into sequence of words
+			- easier to perform using NLTK - natural language toolkit - Use the word.tokenize function
+			- NTLK tokenizers -> Regular exp based tokenizer, Tweet tokenizer
+	   
+	5) Stop words Removal
+	   ------------------
+			- words like is, are, in, at etc
+			
+	6) POS Tagging
+	   -----------
+			- Identifying how words are being used in a sentence can help us better understand what is being said
+			- Relationship between words and recognise cross references
+			- NLTK has pos_tag function
+			- applications : Parsing sentences
+			
+	7)  Named Entity Recognition 
+	    ------------------------
+			- Noun phrases that refer to specific object, person or place 
+			- ne_chunk function 
+			
+	8) Stemming and Lemmatization
+	   --------------------------
+			- Stemming - Process of reducing word to its root form 
+				- Ex: branching, branches, branched ---> branch
+				- Commonly use : porter Stemmer, snowball stemmer 
+			- Lemmatization - Process of reducing words to normalized form
+				- Transformations use dictionary to map words to its root
+				- Ex: is, was, were --> being
+				- default lemmatizer uses wordnet to reduce to the root form 
+				- word netLemmatizer method . lemmatize
+			- Stemming may be a less memory intensive options for task, but it may loose its meaning 
+
+
+
+Overall workflow 
+-----------------
+Sentence ---> Normalize ---> Tokenize ---> Remove stop words ---> Stem/Lemmatize 
+
+This converts Natural language token to sequence of naturalised tokens which can be used for further analysis
+
+
+
+Things to do 
+------------
+Download all nltk data packages (10+GB), or get them later as needed.
+
+
+
+
